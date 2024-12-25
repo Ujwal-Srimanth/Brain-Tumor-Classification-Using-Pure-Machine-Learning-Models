@@ -120,13 +120,4 @@ Brain Tumor Classification/
 - Experiment with deep learning models for improved accuracy.
 - Optimize the handling of large datasets for faster computation.
 
----
-
-## Acknowledgments
-Special thanks to the contributors and resources that facilitated the completion of this project.
-
----
-
-## License
-This project is licensed under the MIT License. See the LICENSE file for details.
 
