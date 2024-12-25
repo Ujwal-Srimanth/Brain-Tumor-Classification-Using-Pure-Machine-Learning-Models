@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+      margin: 0; /* Remove default margin */
+      padding: 0; /* Remove default padding */
+    }
+
+    .top-right-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height:80px;
+      width:180px;
+    }
+    .top-left-image {
+        position: absolute;
+      top: 3px;
+      right: 0;
+      height:80px;
+      width:240px;
+
+    }
+    nav {
+            
+            overflow: hidden;
+            position: absolute;
+            top: 15px;
+            left: 250px;
+        }
+
+        nav a {
+            float: left;
+            display: block;
+            color: black;
+            text-align: center;
+            padding: 20px 30px; /* Increased padding for more space */
+            text-decoration: none;
+            font-size: 18px; /* Increased font size */
+            font-weight: bold; /* Made it bold */
+            font-family: 'Arial', sans-serif; /* Changed font to Comic Sans MS */
+            margin-right: 15px; 
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .center-left-text {
+            position: absolute;
+            top: 48%;
+            left: 40px;
+            transform: translateY(-50%);
+            font-size: 32px;
+            font-weight: bold;
+            color: black;
+            font-family: 'Arial', sans-serif; 
+        }
+        p {
+        line-height: 1.5em; /* or line-height: 150%; */
+        }
+        
+        .buttons-container {
+        display: flex;
+        gap: 10px; /* Decreased the gap between buttons */
+        margin-top: 20px;
+    }
+
+    .blue-button {
+        background-color: #3498db;
+        color: #fff;
+         /* Decreased padding for a smaller button */
+         padding: 8px 10px;
+         width: 140px; /* Adjusted width */
+        height: 30px;
+        text-decoration: none;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 15px; /* Adjusted font size */
+        display: flex; /* Use flexbox */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally *//* Center text vertically within the button */
+    }
+
+    .blue-border-button {
+        color: #3498db;
+        background-color: transparent;
+        border: 2px solid #3498db;
+        padding: 8px 10px;
+         width: 140px; /* Adjusted width */
+        height: 27px;
+        text-decoration: none;
+        border-radius: 5px;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 15px; /* Adjusted font size */
+        display: flex; /* Use flexbox */
+    align-items: center; /* Center vertically */
+    justify-content: center;
+        
+        
+    }
+    
+
+    /* Added styles for individual images */
+    .square-image-1 {
+        position: absolute;
+        right:-460px;
+        top:-10%;
+        width: 200px;
+        height: 180px;
+        border-radius: 10px; /* Adjusted border radius */
+        margin-bottom: 10px;
+       
+    }
+    .square-image-2 {
+        position: absolute;
+        right:-680px;
+        top:-10%;
+        width: 200px;
+        height: 180px;
+        border-radius: 10px; /* Adjusted border radius */
+        margin-bottom: 10px;
+       
+    }
+    .square-image-3 {
+        position: absolute;
+        right:-460px;
+        top:70%;
+        width: 200px;
+        height: 180px;
+        border-radius: 10px; /* Adjusted border radius */
+        margin-bottom: 10px;
+       
+    }
+    .square-image-4 {
+        position: absolute;
+        right:-680px;
+        top:70%;
+        width: 200px;
+        height: 180px;
+        border-radius: 10px; /* Adjusted border radius */
+        margin-bottom: 10px;
+       
+    }
+    .hi{
+        position:absolute;
+        top:100%;
+        width:100%;
+    }
+    .blue-home-link {
+        color: #3498db !important; /* Use !important to override existing styles */
+    }
+</style>
+<body>
+    <img src="static/top.jpg" alt="Your Image Description" class="top-right-image">
+    <nav>
+        <a href="#home" class="blue-home-link">Home</a>
+        <a href="#services">Services</a>
+        <a href="/hibye" class="blue-home-link">Lab Results</a>
+        <a href="/hi" class="blue-home-link">Predict Disease</a>
+    </nav>
+    <img src="static/eme.jpg" alt="Your Image Description" class="top-left-image">
+    <div class="center-left-text">
+        <p>Your Health is Our Prioirty.<br>
+        Guiding You, Every Step of<br>
+        Your Journey</p>
+        <div class="buttons-container">
+            <a href="/get_data" class="blue-button">Get Data</a>
+            <a href="#" class="blue-border-button">Learn More</a>
+        </div>
+       
+            <img src="static/aa.webp" alt="Image 1" class="square-image-1">
+             <img src="static/aa.webp" alt="Image 2" class="square-image-2">
+             <img src="static/aa.webp" alt="Image 3" class="square-image-3">
+            <img src="static/aa.webp" alt="Image 4" class="square-image-4"> 
+       
+    </div>
+    <footer>
+        <img src="D:/HTML_ML/static/fotter.jpg" alt="Footer Image" class="hi">
+        <!-- You can add additional content or links for the footer here -->
+    </footer>
+</body>
+</html>

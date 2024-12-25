@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <title>Tumor Distribution Analysis</title>
+  <style>
+    body {
+      background-color: #f0f8ff; /* Light blue background */
+      margin: 0;
+      padding: 0;
+    }
+    .chart-container {
+      display: flex;
+      justify-content: space-evenly;
+      margin-top: 20px;
+    }
+    .chart {
+      flex: 1;
+      text-align: center;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="chart-container">
+    <div class="chart" id="gender_chart">
+      <h2>Tumor Distribution by Gender</h2>
+    </div>
+
+    <div class="chart" id="age_chart">
+      <h2>Tumor Distribution by Age</h2>
+    </div>
+  </div>
+
+  <div class="chart-container">
+    <div class="chart" id="male_chart">
+      <h2>Male Tumor Distribution</h2>
+    </div>
+
+    <div class="chart" id="female_chart">
+      <h2>Female Tumor Distribution</h2>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    google.charts.load('current', {'packages':['corechart']});
+    google.charts.setOnLoadCallback(drawCharts);
+
+    function drawCharts() {
+      // Gender chart
+      var genderData = google.visualization.arrayToDataTable([
+        ['Gender', 'No Tumor', 'P Tumor', 'M Tumor', 'G Tumor'],
+        ['Male', 20, 35, 65, 85],
+        ['Female', 80, 65, 35, 15]
+      ]);
+
+      var genderOptions = {
+        width: 400,
+        height: 300,
+        isStacked: true,
+        legend: { position: 'top', maxLines: 3 },
+        colors: ['#3366cc', '#dc3912', '#ff9900', '#109618']
+      };
+
+      var genderChart = new google.visualization.ColumnChart(document.getElementById('gender_chart'));
+      genderChart.draw(genderData, genderOptions);
+
+      // Age chart
+      var ageData = google.visualization.arrayToDataTable([
+        ['Age Group', 'No Tumor', 'P Tumor', 'M Tumor', 'G Tumor'],
+        ['<18', 20, 35, 65, 85],
+        ['18-35', 80, 65, 35, 15],
+        ['36-50', 20, 35, 65, 85],
+        ['>50', 80, 65, 35, 15]
+      ]);
+
+      var ageOptions = {
+        width: 400,
+        height: 300,
+        is3D: true,
+        legend: { position: 'top', maxLines: 3 },
+        colors: ['#3366cc', '#dc3912', '#ff9900', '#109618']
+      };
+
+      var ageChart = new google.visualization.PieChart(document.getElementById('age_chart'));
+      ageChart.draw(ageData, ageOptions);
+
+      // Male chart
+      var maleData = google.visualization.arrayToDataTable([
+        ['Tumor Type', 'Percentage'],
+        ['No Tumor', 20],
+        ['P Tumor', 35],
+        ['M Tumor', 65],
+        ['G Tumor', 85]
+      ]);
+
+      var maleOptions = {
+        width: 400,
+        height: 300,
+        is3D: true,
+        legend: { position: 'top' },
+        colors: ['#3366cc', '#dc3912', '#ff9900', '#109618']
+      };
+
+      var maleChart = new google.visualization.PieChart(document.getElementById('male_chart'));
+      maleChart.draw(maleData, maleOptions);
+
+      // Female chart
+      var femaleData = google.visualization.arrayToDataTable([
+        ['Tumor Type', 'Percentage'],
+        ['No Tumor', 80],
+        ['P Tumor', 65],
+        ['M Tumor', 35],
+        ['G Tumor', 15]
+      ]);
+
+      var femaleOptions = {
+        width: 400,
+        height: 300,
+        is3D: true,
+        legend: { position: 'top' },
+        colors: ['#3366cc', '#dc3912', '#ff9900', '#109618']
+      };
+
+      var femaleChart = new google.visualization.PieChart(document.getElementById('female_chart'));
+      femaleChart.draw(femaleData, femaleOptions);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symptoms Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+        }
+
+        h1, h2 {
+            margin-bottom: 10px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        p {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Symptoms Form</h1>
+
+    <form action="/predict" method="post">
+
+        <h2>Symptom 1</h2>
+        <label for="symptom1">Select Symptom 1:</label>
+        <select id="symptom1" name="symptom1">
+            <option value="back_pain">Back Pain</option>
+            <option value="constipation">Constipation</option>
+            <option value="diarrhoea">Diarrhoea</option>
+            <option value="mild_fever">Mild Fever</option>
+            <option value="yellow_urine">Yellow Urine</option>
+            <option value="yellowing_of_eyes">Yellowing of Eyes</option>
+            <option value="acute_liver_failure">Acute Liver Failure</option>
+            <option value="fluid_overload">Fluid Overload</option>
+            <option value="swelling_of_stomach">Swelling of Stomach</option>
+        </select>
+
+        <h2>Symptom 2</h2>
+        <!-- (Same styling as Symptom 1) -->
+
+        <h2>Symptom 3</h2>
+        <!-- (Same styling as Symptom 1) -->
+
+        <!-- Repeat the same structure for Symptom 4, Symptom 5, and Symptom 6 -->
+
+        <input type="submit" value="Submit">
+        <p>{{ pred }}</p>
+        
+    </form>
+
+</body>
+</html>
