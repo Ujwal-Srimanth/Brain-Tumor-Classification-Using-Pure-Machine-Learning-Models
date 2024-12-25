@@ -68,7 +68,7 @@ Several models were evaluated, including:
 ## Project Structure
 ```
 Brain Tumor Classification/
-├── assets/                # Contains image resources and test images
+├── static/                # Contains image resources and test images
 ├── bye.py                # Script for preprocessing
 ├── main.py               # Script for generating pickle files
 ├── next.py               # Additional preprocessing script
