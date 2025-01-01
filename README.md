@@ -98,11 +98,7 @@ Brain Tumor Classification/
 
 ### Installation
 
-1. Install Python dependencies:  
-
-   ```bash
-   pip install -r requirements.txt
-   ```
+1. Install Python dependencies
 
 2. Set up MongoDB and ensure it is running.  
 
@@ -125,10 +121,4 @@ Brain Tumor Classification/
 - **Image Preprocessing and Model Training**: Data preprocessing and model training for tumor classification.  
 - **Application Development**: Basic HTML, CSS, Flask, and MongoDB for application development.  
 - **Documentation**: Comprehensive explanation in `notebook/brain_tumour.ipynb` and presentation in `presentation/presentation.pptx`.  
-
-## Future Work
-
-- Enhance the application with advanced UI/UX.  
-- Experiment with deep learning models for improved accuracy.  
-- Optimize the handling of large datasets for faster computation.  
 
